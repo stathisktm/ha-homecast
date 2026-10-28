@@ -5,6 +5,7 @@ RUN apk add --no-cache nodejs npm
 
 WORKDIR /app
 COPY app/package.json app/package-lock.json ./
+COPY app/scripts ./scripts
 RUN npm ci --omit=dev && npm cache clean --force
 COPY app/index.mjs ./
 

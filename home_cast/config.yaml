@@ -1,5 +1,5 @@
 name: Home Cast
-version: "0.1.1"
+version: "0.1.2"
 slug: home_cast
 description: Το κουμπί Cast του YouTube / YouTube Music παίζει στα ηχεία του Home Assistant (μέσω Home Radio και VLC)
 url: https://github.com/stathisktm/ha-homecast
