@@ -1,0 +1,9 @@
+configuration:
+  name:
+    name: Όνομα συσκευής
+    description: Πώς εμφανίζεται στη λίστα Cast της εφαρμογής YouTube.
+  entity_id:
+    name: Player του Home Radio
+    description: Ο media player του Home Radio που παίζει ό,τι στέλνεται.
+  log_level:
+    name: Επίπεδο καταγραφής

@@ -1,0 +1,15 @@
+{
+  "name": "home-cast",
+  "version": "0.1.0",
+  "description": "YouTube / YouTube Music Cast receiver that plays through Home Radio on the Home Assistant machine",
+  "private": true,
+  "type": "module",
+  "main": "index.mjs",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "yt-cast-receiver": "^2.1.0"
+  }
+}

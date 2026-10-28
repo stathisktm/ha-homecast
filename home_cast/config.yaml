@@ -1,0 +1,23 @@
+name: Home Cast
+version: "0.1.0"
+slug: home_cast
+description: Το κουμπί Cast του YouTube / YouTube Music παίζει στα ηχεία του Home Assistant (μέσω Home Radio και VLC)
+url: https://github.com/stathisktm/ha-homecast
+arch:
+  - aarch64
+  - amd64
+  - armv7
+init: false
+startup: application
+boot: auto
+# DIAL discovery is SSDP multicast, which a Docker bridge doesn't carry.
+host_network: true
+homeassistant_api: true
+options:
+  name: Home Assistant
+  entity_id: media_player.home_radio
+  log_level: info
+schema:
+  name: str
+  entity_id: match(^media_player\..+$)
+  log_level: list(error|warn|info|debug)

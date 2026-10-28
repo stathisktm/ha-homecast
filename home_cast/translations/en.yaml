@@ -1,0 +1,9 @@
+configuration:
+  name:
+    name: Device name
+    description: How it appears in the Cast list of the YouTube app.
+  entity_id:
+    name: Home Radio player
+    description: The Home Radio media player that plays what is cast.
+  log_level:
+    name: Log level
