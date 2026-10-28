@@ -5,5 +5,8 @@ configuration:
   entity_id:
     name: Home Radio player
     description: The Home Radio media player that plays what is cast.
+  port:
+    name: Port
+    description: HTTP port the phones connect to (DIAL). Change it only if it's taken.
   log_level:
     name: Log level

@@ -21,6 +21,8 @@ function loadOptions() {
     name: process.env.HOMECAST_NAME || opts.name || 'Home Assistant',
     entityId: process.env.HOMECAST_ENTITY || opts.entity_id || 'media_player.home_radio',
     logLevel: process.env.HOMECAST_LOG || opts.log_level || 'info',
+    // 8098 (the library's default) is often taken on a Home Assistant host.
+    port: Number(process.env.HOMECAST_PORT || opts.port) || 28098,
   };
 }
 
@@ -300,7 +302,7 @@ async function main() {
 
   const receiver = new YouTubeCastReceiver(player, {
     device: { name: OPTIONS.name, screenName: OPTIONS.name, brand: 'Home Assistant', model: 'Home Cast' },
-    dial: { port: Number(process.env.HOMECAST_PORT) || 8098 },
+    dial: { port: OPTIONS.port },
     dataStore: new FileDataStore(process.env.HOMECAST_STORE || '/data/receiver.json'),
     logger: log,
     logLevel: OPTIONS.logLevel,

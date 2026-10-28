@@ -5,5 +5,8 @@ configuration:
   entity_id:
     name: Player του Home Radio
     description: Ο media player του Home Radio που παίζει ό,τι στέλνεται.
+  port:
+    name: Θύρα
+    description: Η θύρα HTTP όπου συνδέονται τα κινητά (DIAL). Αλλάξτε την μόνο αν είναι πιασμένη.
   log_level:
     name: Επίπεδο καταγραφής
